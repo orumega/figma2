@@ -1,47 +1,54 @@
 //Burger
 
-const burgerMenu = document.querySelector('.header__burger')
+const burgerMenu = document.querySelector(
+  '.header__burger',
+);
 if (burgerMenu) {
-    const navBody = document.querySelector('.header__nav')
-    burgerMenu.addEventListener("click", function (e) {
-        document.body.classList.toggle('_lock')
-        burgerMenu.classList.toggle('_active')
-        navBody.classList.toggle('_active')
-    })
+  const navBody = document.querySelector('.header__nav');
+  burgerMenu.addEventListener('click', function (e) {
+    document.body.classList.toggle('_lock');
+    burgerMenu.classList.toggle('_active');
+    navBody.classList.toggle('_active');
+  });
 }
 
 //Sound
 
-const soundOn = document.querySelector('.main-content__btn-sound')
-const video = document.querySelector('video')
+const soundOn = document.querySelector(
+  '.main-content__btn-sound',
+);
+const video = document.querySelector('video');
 
 soundOn.addEventListener('click', function (e) {
-    if ( video.getAttribute('muted')) {
-        alert(1)
-    }
-})
+  if (video.getAttribute('muted')) {
+    alert(1);
+  }
+});
 
-const popupLinks = document.querySelectorAll('.popup_link')
-const popup = document.getElementById('popup')
+// popup
+
+const toggleBodyScroll = () => {
+  document.body.classList.toggle('lock');
+};
+
+const popupLinks = document.querySelectorAll('.popup_link');
+const popup = document.getElementById('popup');
+
 if (popupLinks.length > 0) {
-    for (let i = 0; i < popupLinks.length; i++) {
-        const popupLink = popupLinks[i]
-        popupLink.addEventListener('click', function (e) {
-            popup.classList.toggle('open')
-        })
-    }
+  popupLinks.forEach((singleLink) => {
+    singleLink.addEventListener('click', () => {
+      popup.classList.toggle('open');
+      toggleBodyScroll();
+    });
+  });
 }
 
-const popupClose = document.querySelectorAll('.close-popup')
-if (popupClose.length > 0) {
-    for (let i = 0; i < popupClose.length; i++) {
-        const element = popupClose[i]
-        element.addEventListener('click', function (e) {
-            popup.classList.toggle('open')
-        })
-    }
-}
+const popupClose = document.querySelector('.close-popup');
 
+popupClose.addEventListener('click', function (e) {
+  popup.classList.toggle('open');
+  toggleBodyScroll();
+});
 
 //Popup
 
@@ -92,7 +99,6 @@ if (popupClose.length > 0) {
 //         })
 //     }
 // }
-
 
 // function popupClose(popupActive, doUnlock = true) {
 //         if (unlock) {
