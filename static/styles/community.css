@@ -144,7 +144,10 @@
 .community__advantages-black-arrow-left {
     max-width: 519px;
     width: 100%;
+    text-align: end;
 }
+
+
 
 .community__masters {
     position: relative;

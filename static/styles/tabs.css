@@ -1,0 +1,9 @@
+
+.tabs__item {
+    display: block;
+}
+
+.tabs__item.active {
+    display: none;
+}
+

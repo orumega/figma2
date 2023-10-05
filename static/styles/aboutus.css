@@ -106,10 +106,6 @@
     max-width: 410px;
 }
 
-.community__advantages-black-arrow-left {
-    text-align: end;
-}
-
 @media screen and (min-width: 1980px) {
    .about-us__content {
     display: flex;

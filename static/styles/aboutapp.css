@@ -77,7 +77,7 @@
     padding-left: 30px;
 }
 
-.about-app__for-customer {
+.about-app__advantage.active {
     color: var(--fcfcfc, #FCFCFC);
     font-family: Montserrat;
     font-size: 20px;
@@ -87,11 +87,11 @@
     text-transform: uppercase; 
     border-style: none none solid none;
     border-color: #DC4A46;
-    padding-right: 42.5px;
+    width: 100%;
     border-width: 0.5px;
 }
 
-.about-app__for-performers {
+.about-app__advantage {
     color: rgba(252, 252, 252, 0.40);
     font-family: Montserrat;
     font-size: 20px;
@@ -101,10 +101,12 @@
     text-transform: uppercase;
     border-style: none none solid none;
     border-color: #FCFCFC; 
-    padding-left: 36.5px;
-    padding-right: 19px;
+    width: 100%;
+    
     border-width: 0.5px;
 }
+
+
 
 .about-app__number {
     color: #FCFCFC;
